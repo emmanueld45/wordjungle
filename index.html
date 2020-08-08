@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style></style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Word</title>
+  </head>
+  <body>
+    <!--=== TAP ANYWHERE OVERLAY START ===-->
+    <div class="tap-anywhere-overlay-container">
+      <div class="box beep">
+        Tap Anywhere.. <br /><br />
+        developed by <br />
+        Emmanuel Dan-Jumbo
+      </div>
+    </div>
+    <!--=== TAP ANYWHERE OVERLAY START ===-->
+
+    <!--=== INTRO OVERLAY START ====--->
+
+    <div class="intro-overlay-container">
+      <img src="img/backgrounds/1.png" alt="" class="cover-img" />
+      <img src="img/buttons/about.png" alt="" class="about-btn" />
+      <div class="title-container">
+        <span class="green">WORD</span> <span class="brown">JUNGLE</span>
+
+        <div
+          class="centered-div"
+          style="margin-bottom: 15px; margin-top: 15px;"
+        >
+          <img src="img/buttons/play.png" class="play-btn" alt="play" />
+        </div>
+
+        <!-- <div class="centered-div">
+          <img src="img/buttons/pad.png" class="pad-btn" alt="pad" />
+        </div> -->
+      </div>
+      <!-- <img src="img/buttons/cup.png" alt="" class="cup-btn" /> -->
+    </div>
+
+    <!--=== INTRO OVERLAY END ====-->
+
+    <!--=== LEVELS OVERLAY START ===---->
+    <div class="levels-overlay-container">
+      <div class="menu-btn" onclick="go_to_intro()">
+        <img src="img/buttons/menu.png" class="img" alt="menu" />
+        <span style="display: block;">Menu</span>
+      </div>
+      <div class="box">
+        <div class="centered-div">
+          <img
+            src="img/backgrounds/level-header.png"
+            class="level-header"
+            alt=""
+          />
+        </div>
+
+        <div class="level-btns-container">
+          <!-- level btns goes here-->
+        </div>
+        <div class="centered-div">
+          <button class="clear-levels-btn" onclick="clear_levels()">
+            clear levels
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--== LEVELS OVERLAY END ===--->
+
+    <!---=== WIN OVERLAY START ====--->
+    <div class="win-overlay-container">
+      <div class="box">
+        <img src="img/backgrounds/5.png" alt="cover-img" class="cover-img" />
+        <img src="img/backgrounds/win_header.png" class="win-header" alt="" />
+        <div class="info-container">
+          <img src="img/backgrounds/table.png" class="cover-img" alt="" />
+          <img src="img/buttons/star_1.png" class="stars" alt="" />
+          <div class="texts">Level Completed!!</div>
+        </div>
+        <div class="nav-container">
+          <img
+            src="img/buttons/menu.png"
+            onclick="go_to_intro()"
+            class="menu-btn"
+            alt="menu"
+          />
+          <img src="img/buttons/next.png" class="next-btn" alt="next" />
+        </div>
+      </div>
+    </div>
+    <!--=== WIN OVERLAY END ===---->
+
+    <!---=== LOSE OVERLAY START ====--->
+    <div class="lose-overlay-container">
+      <div class="box">
+        <img src="img/backgrounds/5.png" alt="cover-img" class="cover-img" />
+        <img src="img/backgrounds/lose_header.png" class="lose-header" alt="" />
+        <div class="info-container">
+          <img src="img/backgrounds/table.png" class="cover-img" alt="" />
+          <img src="img/buttons/star_4.png" class="stars" alt="" />
+          <div class="texts">Level Failed!!</div>
+        </div>
+        <div class="nav-container">
+          <img
+            src="img/buttons/menu.png"
+            onclick="go_to_intro()"
+            class="menu-btn"
+            alt="menu"
+          />
+          <img src="img/buttons/restart.png" class="retry-btn" alt="next" />
+        </div>
+      </div>
+    </div>
+    <!--=== LOSE OVERLAY END ===---->
+
+    <!---== game container start ===-->
+    <div class="game-container">
+      <div class="time-display">
+        <img src="img/buttons/time.png" class="img" alt="time" />
+        <span style="display: block;">
+          <span class="minutes">0</span>:<span class="seconds">0</span>
+        </span>
+      </div>
+      <div class="menu-btn" onclick="go_to_intro()">
+        <img src="img/buttons/menu.png" class="img" alt="menu" />
+        <span style="display: block;">Menu</span>
+      </div>
+
+      <button class="clear" style="display: none;">clear</button>
+      <!-- btns wrapper start-->
+      <div class="btns-wrapper">
+        <!-- letters display start-->
+        <div class="display-container"></div>
+        <!-- letters display end -->
+
+        <!-- btns container start -->
+        <div class="btns-container">
+          <!-- btn 1-->
+          <div class="centered-div">
+            <button id="A" class="btns">A</button>
+          </div>
+
+          <!-- btn2 check-btn btn3-->
+          <div class="centered-div">
+            <button id="B" class="btns" style="margin-right: 5px;">B</button>
+            <button id="middle" class="middle-btn">OK</button>
+            <button id="D" class="btns" style="margin-left: 5px;">D</button>
+          </div>
+
+          <!-- btn 4-->
+          <div class="centered-div">
+            <button id="E" class="btns">E</button>
+          </div>
+        </div>
+        <!-- btns container end-->
+      </div>
+      <!--- btns wrapper end-->
+    </div>
+    <!---=== game container end ===-->
+
+    <script src="js/timer.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
