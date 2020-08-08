@@ -361,13 +361,14 @@ var menu_btn = document.querySelector(".menu-btn");
 var retry_btn = document.querySelector(".retry-btn");
 var next_btn = document.querySelector(".next-btn");
 
-tap_anywhere_overlay.addEventListener("click", function () {
-  tap_anywhere_overlay.style.display = "none";
-  intro_overlay.style.display = "block";
-  background_sound.play();
-});
+// tap_anywhere_overlay.addEventListener("click", function () {
+//   tap_anywhere_overlay.style.display = "none";
+//   intro_overlay.style.display = "block";
+//   background_sound.play();
+// });
 
 play_btn.addEventListener("click", function () {
+  background_sound.play();
   btn_click_sound.play();
   intro_overlay.style.display = "none";
   levels_overlay.style.display = "block";
